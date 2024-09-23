@@ -15,13 +15,19 @@ const projectDetails = {
     description:
       "Skyline Avenue has huge homes that you can decorate as per your wish and where your kids can enjoy their childhood freely. These homes are designed in such a way that you can enjoy fresh air and sunlight all along. Strategically located at Moshi Alandi Road, Skyline Avenue is very well connected with industrial areas, malls, top educational institutes, daily needs, Mumbai-Pune Highway, etc.",
     imageSrc: image1,
-    galleryImages: [galleryImage1, galleryImage2, galleryImage3, galleryImage4],
+    galleryImages: [
+      image1,
+      galleryImage1,
+      galleryImage2,
+      galleryImage3,
+      galleryImage4,
+    ],
     floorPlanSrc: floorPlan1,
     amenities:
       "Gym, Swimming Pool, Clubhouse, Kids Play Area, and 24/7 Security",
     price: "Starting from $50,000",
     location:
-      "Plot No.B1,B2, Moshi - Alandi Rd, opp. Hotel Purnabramha, Moshi, Pune, Maharashtra 412105",
+      "Plot No. B1, B2, Moshi - Alandi Rd, Opp. Hotel Purnabramha, Moshi, Pune, Maharashtra 412105",
     brochureLink: "link-to-brochure.pdf",
   },
   "moraya-enclave": {
@@ -78,9 +84,9 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-blue-100">
       {/* Main Image */}
-      <div className="relative w-full h-[80vh] mb-8">
+      <div className="relative w-full h-screen mb-8">
         <img
           src={project.imageSrc}
           alt={project.title}
@@ -120,7 +126,7 @@ const ProjectDetail = () => {
       </div>
 
       {/* Image Gallery Section */}
-      <div className="max-w-5xl mx-auto mb-12">
+      <div className="max-w-5xl bg-white mx-auto mb-12 p-8 shadow-md rounded-lg">
         <h3 className="text-3xl font-semibold text-blue-900 mb-6">
           Image Gallery
         </h3>
@@ -130,14 +136,14 @@ const ProjectDetail = () => {
               key={index}
               src={image}
               alt={`Gallery Image ${index + 1}`}
-              className="w-full h-64 object-cover rounded-lg shadow-md hover:opacity-90 transition"
+              className="w-full h-72 object-cover rounded-lg shadow-md hover:scale-105 hover:shadow-2xl transition"
             />
           ))}
         </div>
       </div>
 
       {/* Floor Plan Section */}
-      <div className="max-w-5xl mx-auto mb-12 p-8 bg-white shadow-md rounded-lg">
+      <div className="max-w-5xl mx-auto mb-12 p-8 bg-white hover:scale-105 hover:shadow-2xl transition shadow-md rounded-lg">
         <h3 className="text-3xl font-semibold text-blue-900 mb-6">
           Floor Plan
         </h3>
@@ -147,6 +153,24 @@ const ProjectDetail = () => {
           className="w-full h-full object-cover rounded-lg shadow-md"
         />
       </div>
+      <div className="max-w-5xl mx-auto p-8 bg-white hover:scale-105 hover:shadow-2xl transition shadow-md rounded-lg">
+        <h3 className="text-3xl font-semibold text-blue-900 mb-6">
+          Location Map
+        </h3>
+        <div className="w-full rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            title="Google Map"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15118.630005405317!2d73.8656783!3d18.6793592!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c946424316c9%3A0xeb63fb25e417d2e4!2sSkyline%20Avenue%2C%20Moshi!5e0!3m2!1sen!2sin!4v1726817634040!5m2!1sen!2sin"
+            width="100%"
+            height="300"
+            className="border-0"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div></div>
     </div>
   );
 };

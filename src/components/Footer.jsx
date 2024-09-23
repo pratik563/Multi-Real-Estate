@@ -12,13 +12,13 @@ const Footer = () => {
           </h3>
           <a
             href="tel:+919595959595"
-            className="block font-semibold text-lg mb-2 py-2 px-4 rounded-md bg-white hover:bg-orange-600 hover:text-white transition duration-200"
+            className="block font-semibold text-lg mb-2 py-2 px-4 rounded-md hover:bg-[#dd751e] hover:text-black transition duration-200"
           >
             Phone: +91 9595959595
           </a>
           <a
             href="mailto:info@example.com"
-            className="block font-semibold text-lg mb-2 py-2 px-4 rounded-md bg-white hover:bg-orange-600 hover:text-white transition duration-200"
+            className="block font-semibold text-lg mb-2 py-2 px-4 rounded-md hover:bg-[#dd751e] hover:text-black transition duration-200"
           >
             Email: info@example.com
           </a>
@@ -30,19 +30,19 @@ const Footer = () => {
           <div className="flex justify-center space-x-4">
             <a
               href="#"
-              className="text-blue-500 text-2xl p-2 rounded-full bg-white hover:bg-orange-600 transition duration-200"
+              className="text-blue-500 text-2xl p-2 rounded-full hover:bg-[#dd751e] hover:text-black transition duration-200"
             >
               <FaTwitter />
             </a>
             <a
               href="#"
-              className="text-blue-600 text-2xl p-2 rounded-full bg-white hover:bg-orange-600 transition duration-200"
+              className="text-blue-600 text-2xl p-2 rounded-full hover:bg-[#dd751e] hover:text-black transition duration-200"
             >
               <FaFacebookF />
             </a>
             <a
               href="#"
-              className="text-pink-500 text-2xl p-2 rounded-full bg-white hover:bg-orange-600 transition duration-200"
+              className="text-pink-500 text-2xl p-2 rounded-full hover:bg-[#dd751e] hover:text-black transition duration-200"
             >
               <FaInstagram />
             </a>
