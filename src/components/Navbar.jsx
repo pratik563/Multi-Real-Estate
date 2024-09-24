@@ -13,21 +13,25 @@ const Navbar = () => {
   //
 
   return (
-    <header className="sticky top-0 z-50 flex justify-between bg-gray-300 items-center py-3 px-6 md:px-16 transition-all duration-300">
-      <img className="w-12 md:w-20 cursor-pointer" src={logo} alt="Logo" />
+    <header className="sticky top-0 z-50 flex justify-center bg-[#2f0547] items-center py-3 px-6 md:px-16 transition-all duration-300">
+      <img
+        className="w-12 md:w-20 cursor-pointer mr-16 "
+        src={logo}
+        alt="Logo"
+      />
 
       {/* Navigation Links for Desktop */}
       <nav className="hidden md:flex space-x-6 items-center">
-        <a className="text-lg lg:text-xl font-medium hover:bg-[#dd751e] hover:text-black py-2 px-4 rounded-lg transition-all duration-300">
+        <a className="text-lg lg:text-xl font-medium text-white hover:bg-[#910fdb] py-2 px-3 rounded-lg transition-all duration-300">
           <Link to="/">Home</Link>
         </a>
-        <a className="text-lg lg:text-xl font-medium hover:bg-[#dd751e] hover:text-black py-2 px-4 rounded-lg transition-all duration-300">
+        <a className="text-lg lg:text-xl font-medium text-white hover:bg-[#910fdb] py-2 px-3 rounded-lg transition-all duration-300">
           <Link to="/about">About us</Link>
         </a>
-        <a className="text-lg lg:text-xl font-medium hover:bg-[#dd751e] hover:text-black py-2 px-4 rounded-lg transition-all duration-300">
+        <a className="text-lg lg:text-xl font-medium text-white hover:bg-[#910fdb] py-2 px-3 rounded-lg transition-all duration-300">
           <Link to="/projects">Projects</Link>
         </a>
-        <a className="text-lg lg:text-xl font-medium hover:bg-[#dd751e] hover:text-black py-2 px-4 rounded-lg transition-all duration-300">
+        <a className="text-lg lg:text-xl font-medium text-white hover:bg-[#910fdb] py-2 px-3 rounded-lg transition-all duration-300">
           <Link to="/contact">Contact Us</Link>
         </a>
       </nav>
@@ -35,7 +39,7 @@ const Navbar = () => {
       {/* Phone Icon and Number for Desktop */}
       <a
         href="tel:+919595959595"
-        className="hidden md:flex items-center space-x-2 text-lg lg:text-xl font-medium hover:bg-[#dd751e] hover:text-black py-2 px-4 rounded-lg transition-all duration-300"
+        className="hidden md:flex items-center space-x-2 text-lg lg:text-xl text-white font-medium hover:bg-[#910fdb] ml-3 py-2 px-4 rounded-lg transition-all duration-300"
       >
         <i className="bx bxs-phone text-2xl"></i>
         <span>9595959595</span>

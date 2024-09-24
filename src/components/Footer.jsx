@@ -1,68 +1,69 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-300 py-12">
-      <div className="container mx-auto px-4 flex flex-wrap justify-between">
-        {/* Contact Information */}
-        <div className="w-full md:w-1/3 text-center p-4">
-          <h3 className="text-2xl font-bold mb-4 text-black">
-            Contact Information
-          </h3>
-          <a
-            href="tel:+919595959595"
-            className="block font-semibold text-lg mb-2 py-2 px-4 rounded-md hover:bg-[#dd751e] hover:text-black transition duration-200"
-          >
-            Phone: +91 9595959595
-          </a>
-          <a
-            href="mailto:info@example.com"
-            className="block font-semibold text-lg mb-2 py-2 px-4 rounded-md hover:bg-[#dd751e] hover:text-black transition duration-200"
-          >
-            Email: info@example.com
-          </a>
-        </div>
+    <footer className="footer-bg bg-[#2f0547] pt-10 pb-5">
+      <div className="container mx-auto">
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <p className="text-sm leading-loose text-gray-400">
+              &copy;&nbsp;
+              {new Date().getFullYear()}, All Rights Reserved. Powered by:&nbsp;
+              <a
+                href="https://www.promising.co.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <img
+                  src="images/pdpl2.png"
+                  alt="promisingdesigns"
+                  className="inline-block w-4 h-4"
+                />
+              </a>
+              &nbsp;|&nbsp;
+              <a
+                href="privacy-policy.html"
+                className="text-gray-400 hover:text-gray-200"
+              >
+                Privacy Policy
+              </a>
+              &nbsp;|&nbsp;
+              <a
+                href="emi-calculator.html"
+                className="text-gray-400 hover:text-gray-200"
+              >
+                EMI Calculator
+              </a>
+            </p>
 
-        {/* Follow Us */}
-        <div className="w-full md:w-1/3 text-center p-4">
-          <h3 className="text-2xl font-bold mb-4 text-black">Follow Us</h3>
-          <div className="flex justify-center space-x-4">
-            <a
-              href="#"
-              className="text-blue-500 text-2xl p-2 rounded-full hover:bg-[#dd751e] hover:text-black transition duration-200"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="#"
-              className="text-blue-600 text-2xl p-2 rounded-full hover:bg-[#dd751e] hover:text-black transition duration-200"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="#"
-              className="text-pink-500 text-2xl p-2 rounded-full hover:bg-[#dd751e] hover:text-black transition duration-200"
-            >
-              <FaInstagram />
-            </a>
+            <div className="clearfix py-2"></div>
+
+            <p className="text-[10px] leading-loose text-justify text-gray-400">
+              Disclaimer: The plans, specifications, images, and other details
+              herein are only indicative and subject to approval of the
+              concerned authorities. The Group / Owner reserves the right to
+              change any or all of these in the interest of the development,
+              without prior notice or obligation. Artist's impressions are used
+              to illustrate amenities, specifications, images, and other details
+              and these may be applicable to select apartments only. Tolerance
+              of +/- 3% is possible in the unit areas on account of design and
+              construction variances. All brands stated are subject to final
+              decision of the project architect. This printed material does not
+              constitute an offer and/or contract of any type between the Group
+              / Owner and the recipient. No booking or allotment shall be deemed
+              to have been made on the basis of this printed material. Any
+              Purchaser / Lessee of this development shall be governed by the
+              terms and conditions of the agreement for sale / lease entered
+              into between the parties, and no details mentioned in this printed
+              material shall in any way govern such transactions unless as may
+              be otherwise expressly provided in the agreement for sale/lease by
+              the Group / Owner. The Group / Owner does not warrant or assume
+              any liability or responsibility for the accuracy or completeness
+              of any information contained herein.
+            </p>
           </div>
         </div>
-
-        {/* Have Questions */}
-        <div className="w-full md:w-1/3 text-center p-4">
-          <h2 className="text-2xl font-bold mb-4 text-black">
-            Have Questions?
-          </h2>
-          <p className="text-lg font-semibold text-black">
-            Get in touch for consultations, property viewings, or any queries.
-          </p>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="mt-8 text-center text-black">
-        <p>© 2024 Your Company Name. All rights reserved.</p>
       </div>
     </footer>
   );
