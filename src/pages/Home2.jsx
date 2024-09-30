@@ -1,24 +1,18 @@
 import React from "react";
 import { Carousel, Typography, Button } from "@material-tailwind/react";
+import Address from "../components/Address.jsx";
 import aboutimage from "../images/onecom.jpg";
-import aboutimage1 from "../images/portfolio.jpg";
+/* import aboutimage1 from "../images/portfolio.jpg"; */
 import heroImage from "../images/twotwo.jpg";
-import logo from "../images/happy-family1.jpg";
+/* import Contactlogo from "../images/navlogo.png"; */
+import Family from "../images/happy-family1.jpg";
 import image1 from "../images/Skyline.jpg";
 import image2 from "../images/moryaenclave3.jpg";
-import image3 from "../images/Meera.jpg";
-import image4 from "../images/Madhuban.jpg";
-import image5 from "../images/Nilay-heights.jpg";
-import image6 from "../images/Raj-angan.jpg";
-import image7 from "../images/Vaishnav-Recidency.png";
-import image8 from "../images/Kunal-Heritage.jpg";
-import image9 from "../images/Vineet-Heights.jpg";
-import image10 from "../images/Samarth-Srushti.jpg";
-import Card from "../components/Card.jsx";
+import Ongoingcard from "../components/Ongoingcard.jsx";
 import projectimage from "../images/projects-home-bg.png";
 import legacyimage from "../images/legacy-bg.png";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router-dom";
+/* import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa"; 
+import { Link } from "react-router-dom";*/
 
 export function Home2() {
   // Move the project arrays here
@@ -26,71 +20,20 @@ export function Home2() {
     {
       imageSrc: image1,
       title: "Skyline Avenue",
-      description: "2 BHK Luxurious Homes @ Moshi Pimpri-Chinchwad",
+      description: "2 BHK Luxurious Homes @ Moshi P.    Chinchwad",
       projectId: "skyline-avenue",
     },
     {
       imageSrc: image2,
       title: "Moraya Enclave",
       description: "3 BHK Luxurious Homes @ Sector 13 Pradhikaran",
-      projectId: "moraya-enclave",
+      projectId: "morya-enclave",
     },
     {
       imageSrc: image2,
       title: "Moraya Enclave",
       description: "3 BHK Luxurious Homes @ Sector 13 Pradhikaran",
-      projectId: "moraya-enclave",
-    },
-  ];
-
-  const completedprojects = [
-    {
-      imageSrc: image3,
-      title: "Meera Heights",
-      description: "1 BHK Homes & Commercial spaces @ Chikhali",
-      projectId: "meera-heights",
-    },
-    {
-      imageSrc: image4,
-      title: "Madhuban",
-      description: "Premium 1 & 2 BHK Homes @ Thergaon",
-      projectId: "madhuban",
-    },
-    {
-      imageSrc: image5,
-      title: "Nilay Heights",
-      description: "1 & 2 BHK Luxurious Homes @ Pradhikaran Annexe",
-      projectId: "nilay-heights",
-    },
-    {
-      imageSrc: image6,
-      title: "Raj Angan",
-      description: "1 & 2 BHK Luxurious Homes @ Chikhali More Vasti",
-      projectId: "raj-angan",
-    },
-    {
-      imageSrc: image7,
-      title: "Vaishnav Residency",
-      description: "1 & 2 BHK Luxurious Homes @ Chikhali",
-      projectId: "vaishnav-residency",
-    },
-    {
-      imageSrc: image8,
-      title: "Kunal Heritage",
-      description: "2 BHK Luxurious Homes @ Sector 20 Pradhikaran",
-      projectId: "kunal-heritage",
-    },
-    {
-      imageSrc: image9,
-      title: "Vineet Heights",
-      description: "1 & 2 BHK Luxurious Homes @ Sane Chowk",
-      projectId: "vineet-heights",
-    },
-    {
-      imageSrc: image10,
-      title: "Samarth Srushti",
-      description: "1 & 2 BHK Luxurious Homes @ Chikhali",
-      projectId: "samarth-srushti",
+      projectId: "morya-enclave",
     },
   ];
 
@@ -194,7 +137,7 @@ export function Home2() {
           {/* Logo Section */}
           <div className="flex justify-center w-full md:w-1/2 mb-8 md:mb-0 mr-4 px-4">
             <img
-              src={logo}
+              src={Family}
               alt="Right side content"
               className="w-[700px] h-[700px] border border-gray-600 border-4 p-2 object-cover"
             />
@@ -231,7 +174,7 @@ export function Home2() {
           </div>
         </div>
       </div>
-      {/* //Projects */}
+      {/* OngoingProjects */}
       <div
         className="flex flex-col justify-center items-center bg-repeat bg-center p-8 w-full h-auto py-16 bg-white"
         style={{ backgroundImage: `url(${projectimage})` }}
@@ -239,16 +182,16 @@ export function Home2() {
         <h1 className="md:text-3xl font-semibold text-3xl p-3 text-white mb-12">
           Ongoing Projects
         </h1>
-
         {/* Ongoing Projects Section */}
         <div className="w-full max-w-screen-2xl mx-auto flex justify-center mb-8">
           <div className="flex flex-wrap gap-12 justify-center">
             {ongoingProjects.map((project, index) => (
-              <Card
+              <Ongoingcard
                 key={index}
                 imageSrc={project.imageSrc}
                 title={project.title}
                 description={project.description}
+                projectId={project.projectId}
               />
             ))}
           </div>
@@ -263,90 +206,26 @@ export function Home2() {
           Our Legacy
         </h1>
         <div class="flex justify-center gap-16 mt-8 my-10">
-          <div class="border border-white text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105 w-40">
+          <div class="border-2 border-[#cc8b12] text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105 w-40">
             <h2 class="text-3xl font-bold">20+</h2>
             <p class="mt-2 text-lg">Projects Delivered</p>
           </div>
-          <div class="border border-white text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105 w-40">
+          <div class="border-2 border-[#cc8b12] text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105 w-40">
             <h2 class="text-3xl font-bold">03+</h2>
             <p class="mt-2 text-lg">Family Served</p>
           </div>
-          <div class="border border-white text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105 w-40">
+          <div class="border-2 border-[#cc8b12] text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105 w-40">
             <h2 class="text-3xl font-bold">20+</h2>
             <p class="mt-2 text-lg">Years Service</p>
           </div>
-          <div class="border border-white text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105 w-40">
+          <div class="border-2 border-[#cc8b12] text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105 w-40">
             <h2 class="text-3xl font-bold">900+</h2>
             <p class="mt-2 text-lg">Homes Sold</p>
           </div>
         </div>
       </div>
       {/* Address */}
-      <div className="flex flex-col md:flex-row text-black w-full h-auto border border-gray-800 py-10 justify-center items-center">
-        <div className="flex flex-col items-center md:flex-row w-full max-w-screen-2xl mx-auto">
-          {/* Map Section */}
-          <div className="w-full md:w-1/2 rounded-lg overflow-hidden shadow-lg mb-4 md:mr-10">
-            <iframe
-              title="Google Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8055185169054!2d73.85534781481648!3d18.520430187409707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0738a80db45%3A0x3a0a4c6d1c4f781f!2sXYZ%20Building%2C%20Pune!5e0!3m2!1sen!2sin!4v1693766800000!5m2!1sen!2sin"
-              width="550"
-              height="550"
-              className="border-0 rounded-full"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-
-          {/* Text Section */}
-          <div className="flex flex-col justify-center items-center md:items-start w-full md:w-1/2 px-4 text-center md:text-left">
-            <h2 className="text-3xl font-semibold text-purple-900 mb-4">
-              Our Office:
-            </h2>
-            <p className="text-lg mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
-              officia numquam
-            </p>
-            <p className="text-lg mb-4">
-              <a
-                href="tel:+919595959595"
-                className="hover:text-purple-900 hover:font-medium"
-              >
-                Phone: +91 9595959595
-              </a>
-              <br />
-              <a
-                href="mailto:info@example.com"
-                className="hover:text-purple-900 hover:font-medium"
-              >
-                Email: info@example.com
-              </a>
-            </p>
-
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-blue-500 text-2xl p-2 rounded-full hover:bg-purple-900 hover:text-white transition duration-200"
-              >
-                <FaTwitter />
-              </a>
-              <a
-                href="#"
-                className="text-blue-600 text-2xl p-2 rounded-full hover:bg-purple-900 hover:text-white transition duration-200"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="#"
-                className="text-pink-500 text-2xl p-2 rounded-full hover:bg-purple-900 hover:text-white transition duration-200"
-              >
-                <FaInstagram />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Address />
     </>
   );
 }

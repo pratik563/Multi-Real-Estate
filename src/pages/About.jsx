@@ -1,9 +1,12 @@
 import React from "react";
 import aboutimage from "../images/portfolio.jpg"; // Background image
 import logo from "../images/navlogo.png"; // Logo image
+import Contactlogo from "../images/navlogo.png";
 import missionImage from "../images/our-mission.jpg"; // Image for mission
 import visionImage from "../images/our vision.jpg"; // Image for vision
 import founderImage from "../images/founder.jpg"; // Founder photo
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import Address from "../components/Address";
 
 const About = () => {
   return (
@@ -91,7 +94,7 @@ const About = () => {
       </div>
 
       {/* Founder Section: Image on Left, Text on Right */}
-      <div className="flex flex-col md:flex-row items-center px-6 mt-12 w-full text-center md:text-left">
+      <div className="flex flex-col md:flex-row items-center px-6 mt-12 w-full bg-black text-center md:text-left">
         <div className="w-full md:w-1/2">
           <img
             src={founderImage}
@@ -103,11 +106,11 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl text-blue-900 font-semibold mb-6">
             From the Founder’s Desk
           </h2>
-          <p className="text-2xl font-semibold mb-6 text-[#6b9330] ">
+          <p className="text-2xl font-semibold mb-6 text-[#cc8b12] ">
             Mr. Dnyaneshwar Kadu, <br />
             Founder, Moraya Group of Companies
           </p>
-          <p className="text-md text-justify md:text-xl mb-8">
+          <p className="text-md text-justify md:text-xl text-white mb-8">
             As the founder of Moraya Group of Companies, Mr. Dyaneshwar Kadu has
             been instrumental in shaping the company's growth and success since
             establishing it in 2002. With a clear vision and unwavering
@@ -126,6 +129,9 @@ const About = () => {
           </p>
         </div>
       </div>
+
+      {/* Address */}
+      <Address />
     </div>
   );
 };

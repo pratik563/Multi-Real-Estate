@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import logo from "../images/navlogo.png";
+import logo from "../images/navlogowhite.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   // State to handle mobile menu visibility
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // Dropdown menu
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // Toggle menu function
   const toggleMenu = () => {
@@ -13,23 +15,62 @@ const Navbar = () => {
   //
 
   return (
-    <header className="sticky top-0 z-50 flex justify-center bg-[#2f0547] items-center py-3 px-6 md:px-16 transition-all duration-300">
+    <header className="sticky top-0 border-b-2 border-[#cc8b12] z-50 flex justify-center bg-[#2f0547] items-center py-3 px-6 md:px-16 transition-all duration-300">
       <img
-        className="w-12 md:w-20 cursor-pointer mr-16 "
+        className="w-12 md:w-24 cursor-pointer mr-16 "
         src={logo}
         alt="Logo"
       />
 
       {/* Navigation Links for Desktop */}
-      <nav className="hidden md:flex space-x-6 items-center">
+      <nav className="hidden relative md:flex space-x-6 items-center">
         <a className="text-lg lg:text-xl font-medium text-white hover:bg-[#910fdb] py-2 px-3 rounded-lg transition-all duration-300">
           <Link to="/">Home</Link>
         </a>
         <a className="text-lg lg:text-xl font-medium text-white hover:bg-[#910fdb] py-2 px-3 rounded-lg transition-all duration-300">
           <Link to="/about">About us</Link>
         </a>
-        <a className="text-lg lg:text-xl font-medium text-white hover:bg-[#910fdb] py-2 px-3 rounded-lg transition-all duration-300">
-          <Link to="/projects">Projects</Link>
+        <a
+          className="text-lg lg:text-xl font-medium text-white hover:bg-[#910fdb] py-2 px-3 rounded-lg transition-all duration-300"
+          onMouseEnter={() => setDropdownOpen(true)}
+          onMouseLeave={() => setDropdownOpen(false)}
+        >
+          <Link to="#">
+            Projects <i class="fa fa-caret-down"></i>
+          </Link>
+
+          {dropdownOpen && (
+            <div className="absolute bg-[#2f0547] text-white mt-2 py-2 w-64 rounded-lg shadow-lg">
+              {/* Ongoing Projects Label */}
+              <div className="lg:text-xl font-medium px-4 py-2">
+                <i class="fa fa-caret-down"></i> Ongoing Projects
+              </div>
+              <Link
+                to="/skyline-avenue"
+                className="block px-4 py-2 lg:text-lg hover:bg-[#910fdb] transition-all duration-200"
+              >
+                <i class="fa fa-caret-right fa-fw"></i> Skyline Avenue
+              </Link>
+              <Link
+                to="/morya-enclave"
+                className="block px-4 py-2 lg:text-lg hover:bg-[#910fdb] transition-all duration-200"
+              >
+                <i class="fa fa-caret-right fa-fw"></i> Morya Enclave
+              </Link>
+              {/*  <Link
+                to="/xyz-projects"
+                className="block px-4 py-2 hover:bg-gray-200 transition-all duration-200"
+              >
+                XYZ Projects
+              </Link> */}
+              <Link
+                to="/projects"
+                className="block px-4 py-2 lg:text-lg hover:bg-[#910fdb] transition-all duration-200"
+              >
+                Completed Projects
+              </Link>
+            </div>
+          )}
         </a>
         <a className="text-lg lg:text-xl font-medium text-white hover:bg-[#910fdb] py-2 px-3 rounded-lg transition-all duration-300">
           <Link to="/contact">Contact Us</Link>
@@ -47,7 +88,7 @@ const Navbar = () => {
 
       {/* Hamburger Menu for Mobile */}
       <i
-        className="md:hidden bx bx-menu text-4xl cursor-pointer hover:text-[#dd751e] transition duration-300"
+        className="md:hidden bx bx-menu text-4xl cursor-pointer text-white hover:text-[#dd751e] transition duration-300"
         onClick={toggleMenu}
       ></i>
 
@@ -82,7 +123,7 @@ const Navbar = () => {
           onClick={toggleMenu} // Close menu on click
           className="text-xl font-medium hover:bg-[#dd751e] hover:text-white py-2 px-4 rounded-lg transition-all duration-300"
         >
-          <Link to="/projects">Projects</Link>
+          <Link to="/projects">Projects ▼</Link>
         </a>
         <a
           href="#contact"
