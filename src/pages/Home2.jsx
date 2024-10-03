@@ -52,14 +52,14 @@ export function Home2() {
               <Typography
                 variant="h1"
                 color="white"
-                className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+                className="mb-4 hidden sm:block text-3xl md:text-4xl lg:text-5xl"
               >
                 Where Quality Meets Excellence
               </Typography>
               <Typography
                 variant="lead"
                 color="white"
-                className="mb-12 opacity-80"
+                className="mb-12 hidden sm:block  opacity-80"
               >
                 Moraya Group of Companies is a renowned name in the real estate
                 development industry in Pimpri Chinchwad Municipal Corporation
@@ -67,7 +67,7 @@ export function Home2() {
                 real estate services & building exclusive homes that meet the
                 highest standards of quality & craftsmanship.
               </Typography>
-              <div className="flex gap-2">
+              <div className="flex hidden sm:block  gap-2">
                 <Button size="lg" color="white">
                   Projects
                 </Button>
@@ -129,13 +129,10 @@ export function Home2() {
         </div>
       </Carousel>
       {/* About us */}
-      <div
-        className="flex flex-col md:flex-row text-black lg:bg-cover lg:bg-center w-full h-auto py-16 md:h-[calc(100vh)] justify-center items-center"
-        /* style={{ backgroundImage: `url(${})` }} */
-      >
+      <div className="flex flex-col md:flex-row text-black lg:bg-cover lg:bg-center w-full h-auto py-16 md:h-[calc(100vh)] justify-center items-center">
         <div className="flex flex-col items-center md:flex-row w-full max-w-screen-2xl mx-auto px-6">
-          {/* Logo Section */}
-          <div className="flex justify-center w-full md:w-1/2 mb-8 md:mb-0 mr-4 px-4">
+          {/* Logo Section - Hidden on mobile view */}
+          <div className="hidden md:flex justify-center w-full md:w-1/2 mb-8 md:mb-0 mr-4 px-4">
             <img
               src={Family}
               alt="Right side content"
@@ -144,21 +141,21 @@ export function Home2() {
           </div>
 
           {/* Text Section */}
-          <div className="flex flex-col justify-center items-center md:items-start px-6 w-full md:w-1/2 text-center md:text-left">
-            <h1 className="text-3xl md:text-3xl font-semibold text-purple-800 mb-8">
+          <div className="flex flex-col justify-center items-center md:items-start px-4 md:px-6 w-full md:w-1/2 text-center md:text-left">
+            <h1 className="text-2xl md:text-3xl font-semibold text-purple-800 mb-4 md:mb-6">
               Moraya Group
             </h1>
-            <h1 className="text-3xl md:text-3xl font-medium mb-8">
+            <h1 className="text-xl md:text-3xl font-medium mb-4 md:mb-6">
               A Legacy of Excellence
             </h1>
-            <p className="text-lg md:text-lg mb-1">
+            <p className="text-base md:text-lg mb-2 md:mb-4">
               Founded in 2005, Moraya Group has established itself as a
               prominent player in the real estate industry. With a strong
               commitment to quality, innovation, and customer satisfaction, we
               have consistently delivered exceptional projects that redefine the
               standards of living.
             </p>
-            <p className="text-lg md:text-lg mb-1">
+            <p className="text-base md:text-lg mb-2 md:mb-4">
               Founded in 2005, Moraya Group has established itself as a
               prominent player in the real estate industry. With a strong
               commitment to quality, innovation, and customer satisfaction, we
@@ -166,7 +163,7 @@ export function Home2() {
               standards of living.
             </p>
             <button
-              className="border border-black mt-4 p-3 text-lg md:text-lg font-medium rounded-md text-white bg-purple-800 hover:bg-purple-900 hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
+              className="border border-black mt-4 p-3 text-base md:text-lg font-medium rounded-md text-white bg-purple-800 hover:bg-purple-900 hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
               type="button"
             >
               Explore More
@@ -179,7 +176,7 @@ export function Home2() {
         className="flex flex-col justify-center items-center bg-repeat bg-center p-8 w-full h-auto py-16 bg-white"
         style={{ backgroundImage: `url(${projectimage})` }}
       >
-        <h1 className="md:text-3xl font-semibold text-3xl p-3 text-white mb-12">
+        <h1 className="md:text-3xl font-semibold text-2xl p-3 text-white mb-12">
           Ongoing Projects
         </h1>
         {/* Ongoing Projects Section */}
@@ -202,25 +199,35 @@ export function Home2() {
         className="image-cover p-6"
         style={{ backgroundImage: `url(${legacyimage})` }}
       >
-        <h1 className="text-3xl md:text-3xl font-semibold p-3 text-white text-center">
+        <h1 className="text-2xl md:text-3xl font-semibold p-3 text-white text-center">
           Our Legacy
         </h1>
-        <div class="flex justify-center gap-16 mt-8 my-10">
-          <div class="border-2 border-[#cc8b12] text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105 w-40">
-            <h2 class="text-3xl font-bold">20+</h2>
-            <p class="mt-2 text-lg">Projects Delivered</p>
+        {/* Responsive Card Section */}
+        <div className="w-full max-w-screen-lg mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-8 my-10">
+          <div className="border-2 border-[#cc8b12] text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105">
+            <h2 className="text-2xl md:text-3xl font-bold">20+</h2>
+            <p className="hidden sm:block mt-2 text-lg">Projects Delivered</p>
+            <p className="sm:hidden mt-2 text-lg">
+              Projects <br /> Delivered
+            </p>
           </div>
-          <div class="border-2 border-[#cc8b12] text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105 w-40">
-            <h2 class="text-3xl font-bold">03+</h2>
-            <p class="mt-2 text-lg">Family Served</p>
+          <div className="border-2 border-[#cc8b12] text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105">
+            <h2 className="text-2xl md:text-3xl font-bold">03+</h2>
+            <p className="mt-2 text-lg">
+              Family <br /> Served
+            </p>
           </div>
-          <div class="border-2 border-[#cc8b12] text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105 w-40">
-            <h2 class="text-3xl font-bold">20+</h2>
-            <p class="mt-2 text-lg">Years Service</p>
+          <div className="border-2 border-[#cc8b12] text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105">
+            <h2 className="text-2xl md:text-3xl font-bold">20+</h2>
+            <p className="mt-2 text-lg">
+              Years <br /> Service
+            </p>
           </div>
-          <div class="border-2 border-[#cc8b12] text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105 w-40">
-            <h2 class="text-3xl font-bold">900+</h2>
-            <p class="mt-2 text-lg">Homes Sold</p>
+          <div className="border-2 border-[#cc8b12] text-white p-8 rounded-tl-[15px] rounded-br-[15px] shadow-lg text-center transform transition-transform duration-300 hover:scale-105">
+            <h2 className="text-2xl md:text-3xl font-bold">900+</h2>
+            <p className="mt-2 text-lg">
+              Homes <br /> Sold
+            </p>
           </div>
         </div>
       </div>

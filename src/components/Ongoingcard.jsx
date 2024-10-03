@@ -6,10 +6,11 @@ const Ongoingcard = ({ imageSrc, title, description, projectId }) => {
     <div className="max-w-sm rounded-md mb-3 overflow-hidden shadow-lg bg-white text-black transform transition duration-300 hover:scale-105 hover:shadow-2xl">
       {/* Ensure all images are the same size */}
       <img
-        className="w-full h-64 object-cover border-b-4 border-b-purple-900 md:h-[450px] md:w-[380px] object-cover transition duration-300 hover:brightness-110"
+        className="w-full h-96 object-cover border-b-4 border-b-purple-900 md:h-[450px] md:w-[380px] object-cover transition duration-300 hover:brightness-110"
         src={imageSrc}
         alt={title}
       />
+
       <div className="px-6 text-center bg-white py-2">
         <div className="font-semibold text-purple-900 text-xl mt-1 mb-2">
           {title}
