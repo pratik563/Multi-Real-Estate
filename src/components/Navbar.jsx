@@ -96,7 +96,7 @@ const Navbar = () => {
       <div
         className={`${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
-        } fixed top-[75px] h-[350px] right-0 w-full text-white bg-[#2f0547] shadow-lg transition-transform duration-300 ease-in-out md:hidden flex flex-col items-start pl-6 space-y-6 pt-6`}
+        } fixed top-[75px] h-[370px] right-0 w-full text-white bg-[#2f0547] shadow-lg transition-transform duration-300 ease-in-out md:hidden flex flex-col items-start pl-6 space-y-6 pt-6`}
       >
         <a
           href="#home"

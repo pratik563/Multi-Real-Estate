@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel, Typography, Button } from "@material-tailwind/react";
 import Address from "../components/Address.jsx";
 import aboutimage from "../images/onecom.jpg";
+import aboutbackimage from "../images/portfolio1.jpg";
 /* import aboutimage1 from "../images/portfolio.jpg"; */
 import heroImage from "../images/twotwo.jpg";
 /* import Contactlogo from "../images/navlogo.png"; */
@@ -129,13 +130,16 @@ export function Home2() {
         </div>
       </Carousel>
       {/* About us */}
-      <div className="flex flex-col md:flex-row text-black lg:bg-cover lg:bg-center w-full h-auto md:py-16 py-8 md:h-[calc(100vh)] justify-center items-center">
+      <div
+        className="flex flex-col md:flex-row text-black lg:bg-cover lg:bg-center w-full h-auto md:py-16 py-8 md:h-[calc(100vh)] justify-center items-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${aboutbackimage})` }}
+      >
         <div className="flex flex-col items-center md:flex-row w-full max-w-screen-2xl mx-auto px-6">
           {/* Logo Section - Hidden on mobile view */}
           <div className="hidden md:flex justify-center w-full md:w-1/2 mb-8 md:mb-0 md:mr-4 px-4">
             <img
               src={Family}
-              alt="Right side content"
+              alt="Left side content"
               className="w-[700px] h-[700px] border border-gray-600 border-4 p-2 object-cover"
             />
           </div>
