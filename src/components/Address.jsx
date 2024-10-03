@@ -6,26 +6,11 @@ const Address = () => {
   return (
     <div className="flex flex-col bg-gray-300 text-black w-full h-auto py-10 justify-center items-center">
       <div className="flex flex-col md:flex-row w-full max-w-screen-2xl mx-auto px-4">
-        {/* Map Section */}
-        <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-4">
-          <iframe
-            title="Google Map"
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3780.928777058193!2d73.753985!3d18.622272999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDM3JzIwLjIiTiA3M8KwNDUnMTQuNCJF!5e0!3m2!1sen!2sin!4v1727181944328!5m2!1sen!2sin"
-            alt="Google Map"
-            width="100%"
-            height="100%"
-            className="border-0 md:rounded-full md:w-[500px] md:h-[500px] w-full h-[300px]"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-
         {/* Text Section */}
         <div className="flex flex-col justify-center items-center md:items-start w-full md:w-1/2 text-center md:text-left">
           <img
             src={Contactlogo}
-            className="mb-10 w-32 md:w-40"
+            className="md:mb-9 mb-6 w-32 md:w-40"
             alt="morya_logo"
           />
           <h2 className="text-2xl md:text-3xl font-semibold text-purple-900 mb-4">
@@ -77,6 +62,20 @@ const Address = () => {
               <FaInstagram />
             </a>
           </div>
+        </div>
+        {/* Map Section */}
+        <div className="w-full md:w-1/2 mt-2 mb-4 md:mb-0 md:mr-4">
+          <iframe
+            title="Google Map"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3780.928777058193!2d73.753985!3d18.622272999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDM3JzIwLjIiTiA3M8KwNDUnMTQuNCJF!5e0!3m2!1sen!2sin!4v1727181944328!5m2!1sen!2sin"
+            alt="Google Map"
+            width="100%"
+            height="100%"
+            className="border-0 md:rounded-full md:w-[500px] md:h-[500px] w-full h-[300px]"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </div>

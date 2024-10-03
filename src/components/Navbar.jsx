@@ -15,9 +15,9 @@ const Navbar = () => {
   //
 
   return (
-    <header className="sticky top-0 border-b-2 border-[#cc8b12] z-50 flex justify-center bg-[#2f0547] items-center py-3 px-6 md:px-16 transition-all duration-300">
+    <header className="sticky top-0 border-b-2 border-[#cc8b12] z-50 flex justify-between md:justify-center bg-[#2f0547] items-center py-3 px-6 md:px-16 transition-all duration-300">
       <img
-        className="w-12 md:w-24 cursor-pointer mr-16 "
+        className="w-14 md:w-24 cursor-pointer mr-16 "
         src={logo}
         alt="Logo"
       />
@@ -96,7 +96,7 @@ const Navbar = () => {
       <div
         className={`${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
-        } fixed top-0 right-0 h-full w-3/4 bg-gray-200 shadow-lg transition-transform duration-300 ease-in-out md:hidden flex flex-col items-center space-y-6 pt-6`}
+        } fixed top-0 right-0 h-full w-3/4 text-white bg-[#2f0547] shadow-lg transition-transform duration-300 ease-in-out md:hidden flex flex-col items-center space-y-6 pt-6`}
       >
         {/* Hamburger Icon inside the mobile menu to close it */}
         <i
