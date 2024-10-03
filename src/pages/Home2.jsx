@@ -129,10 +129,10 @@ export function Home2() {
         </div>
       </Carousel>
       {/* About us */}
-      <div className="flex flex-col md:flex-row text-black lg:bg-cover lg:bg-center w-full h-auto py-16 md:h-[calc(100vh)] justify-center items-center">
+      <div className="flex flex-col md:flex-row text-black lg:bg-cover lg:bg-center w-full h-auto md:py-16 py-8 md:h-[calc(100vh)] justify-center items-center">
         <div className="flex flex-col items-center md:flex-row w-full max-w-screen-2xl mx-auto px-6">
           {/* Logo Section - Hidden on mobile view */}
-          <div className="hidden md:flex justify-center w-full md:w-1/2 mb-8 md:mb-0 mr-4 px-4">
+          <div className="hidden md:flex justify-center w-full md:w-1/2 mb-8 md:mb-0 md:mr-4 px-4">
             <img
               src={Family}
               alt="Right side content"
@@ -176,11 +176,11 @@ export function Home2() {
         className="flex flex-col justify-center items-center bg-repeat bg-center p-8 w-full h-auto py-16 bg-white"
         style={{ backgroundImage: `url(${projectimage})` }}
       >
-        <h1 className="md:text-3xl font-semibold text-2xl p-3 text-white mb-12">
+        <h1 className="md:text-3xl font-semibold text-2xl text-white mb-8 md:mb-12">
           Ongoing Projects
         </h1>
         {/* Ongoing Projects Section */}
-        <div className="w-full max-w-screen-2xl mx-auto flex justify-center mb-8">
+        <div className="w-full max-w-screen-2xl mx-auto flex justify-center mb-2">
           <div className="flex flex-wrap gap-12 justify-center">
             {ongoingProjects.map((project, index) => (
               <Ongoingcard

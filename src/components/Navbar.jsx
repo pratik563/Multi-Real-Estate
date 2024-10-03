@@ -88,7 +88,7 @@ const Navbar = () => {
 
       {/* Hamburger Menu for Mobile */}
       <i
-        className="md:hidden bx bx-menu text-4xl cursor-pointer text-white hover:text-[#dd751e] transition duration-300"
+        className="md:hidden bx bx-menu text-4xl cursor-pointer hover:bg-[#910fdb] rounded-lg p-1 text-white transition duration-300"
         onClick={toggleMenu}
       ></i>
 
@@ -96,48 +96,77 @@ const Navbar = () => {
       <div
         className={`${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
-        } fixed top-0 right-0 h-full w-3/4 text-white bg-[#2f0547] shadow-lg transition-transform duration-300 ease-in-out md:hidden flex flex-col items-center space-y-6 pt-6`}
+        } fixed top-[75px] h-[350px] right-0 w-full text-white bg-[#2f0547] shadow-lg transition-transform duration-300 ease-in-out md:hidden flex flex-col items-start pl-6 space-y-6 pt-6`}
       >
-        {/* Hamburger Icon inside the mobile menu to close it */}
-        <i
-          className="bx bx-menu-alt-right text-4xl cursor-pointer absolute top-4 right-4 hover:text-[#dd751e] transition duration-300"
-          onClick={toggleMenu}
-        ></i>
-
         <a
           href="#home"
           onClick={toggleMenu} // Close menu on click
-          className="text-xl font-medium hover:bg-[#dd751e] hover:text-white py-2 px-4 rounded-lg transition-all duration-300"
+          className="text-base font-medium hover:bg-[#910fdb] hover:text-white py-2 px-2 rounded-lg transition-all duration-300"
         >
           <Link to="/">Home</Link>
         </a>
         <a
           href="#about"
           onClick={toggleMenu} // Close menu on click
-          className="text-xl font-medium hover:bg-[#dd751e] hover:text-white py-2 px-4 rounded-lg transition-all duration-300"
+          className="text-base font-medium hover:bg-[#910fdb] hover:text-white py-2 px-2 rounded-lg transition-all duration-300"
         >
           <Link to="/about">About us</Link>
         </a>
         <a
-          href="#projects"
-          onClick={toggleMenu} // Close menu on click
-          className="text-xl font-medium hover:bg-[#dd751e] hover:text-white py-2 px-4 rounded-lg transition-all duration-300"
+          className="text-base lg:text-xl font-medium text-white hover:bg-[#910fdb] py-2 px-3 rounded-lg transition-all duration-300"
+          onMouseEnter={() => setDropdownOpen(true)}
+          onMouseLeave={() => setDropdownOpen(false)}
         >
-          <Link to="/projects">Projects ▼</Link>
+          <Link to="#">
+            Projects <i class="fa fa-caret-down"></i>
+          </Link>
+
+          {dropdownOpen && (
+            <div className="absolute bg-[#2f0547] text-white mt-2 py-2 w-64 rounded-lg shadow-lg">
+              {/* Ongoing Projects Label */}
+              <div className="lg:text-xl text-base font-medium px-4 py-2">
+                <i class="fa fa-caret-down"></i> Ongoing Projects
+              </div>
+              <Link
+                to="/skyline-avenue"
+                className="block px-4 py-2 text-base lg:text-lg hover:bg-[#910fdb] transition-all duration-200"
+              >
+                <i class="fa fa-caret-right fa-fw"></i> Skyline Avenue
+              </Link>
+              <Link
+                to="/morya-enclave"
+                className="block px-4 py-2 text-base lg:text-lg hover:bg-[#910fdb] transition-all duration-200"
+              >
+                <i class="fa fa-caret-right fa-fw"></i> Morya Enclave
+              </Link>
+              {/*  <Link
+                to="/xyz-projects"
+                className="block px-4 py-2 hover:bg-gray-200 transition-all duration-200"
+              >
+                XYZ Projects
+              </Link> */}
+              <Link
+                to="/projects"
+                className="block px-4 py-2 text-base lg:text-lg hover:bg-[#910fdb] transition-all duration-200"
+              >
+                Completed Projects
+              </Link>
+            </div>
+          )}
         </a>
         <a
           href="#contact"
           onClick={toggleMenu} // Close menu on click
-          className="text-xl font-medium hover:bg-[#dd751e] hover:text-white py-2 px-4 rounded-lg transition-all duration-300"
+          className="text-base font-medium hover:bg-[#910fdb] hover:text-white py-2 px-2 rounded-lg transition-all duration-300"
         >
           <Link to="/contact">Contact Us</Link>
         </a>
         <a
           href="tel:+919595959595"
           onClick={toggleMenu} // Close menu on click
-          className="flex items-center space-x-2 text-xl font-medium hover:bg-[#dd751e] hover:text-white py-2 px-4 rounded-lg transition-all duration-300"
+          className="flex items-center space-x-2 text-base font-medium hover:bg-[#910fdb] hover:text-white py-2 px-2 rounded-lg transition-all duration-300"
         >
-          <i className="bx bxs-phone text-2xl"></i>
+          <i className="bx bxs-phone text-xl"></i>
           <span>9595959595</span>
         </a>
       </div>
