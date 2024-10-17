@@ -10,6 +10,7 @@ import MoryaEnclave from "./pages/MoryaEnclave";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import GoToTop from "./components/GoToTop";
 import Footer from "./components/Footer";
 import { Home2 } from "./pages/Home2";
 // importing Projects details componenets
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         {/* <Route path="/projects/:projectId" element={<ProjectDetail />} /> */}
       </Routes>
+      <GoToTop />
       <Footer />
     </Router>
   );

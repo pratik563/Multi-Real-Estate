@@ -21,17 +21,11 @@ const Footer = () => {
               />
             </a>
             &nbsp;|&nbsp;
-            <a
-              href="privacy-policy.html"
-              className="text-gray-400 hover:text-gray-200"
-            >
+            <a href="/#" className="text-gray-400 hover:text-gray-200">
               Privacy Policy
             </a>
             &nbsp;|&nbsp;
-            <a
-              href="emi-calculator.html"
-              className="text-gray-400 hover:text-gray-200"
-            >
+            <a href="/#" className="text-gray-400 hover:text-gray-200">
               EMI Calculator
             </a>
           </p>

@@ -23,9 +23,19 @@ const Projects = () => {
       description: "1 BHK Homes & Commercial @ Chikhali",
     },
     {
+      imageSrc: image7,
+      title: "Vaishnav Residency",
+      description: "1 & 2 BHK Luxurious Homes @ Chikhali",
+    },
+    {
       imageSrc: image4,
       title: "Madhuban",
       description: "Premium 1 & 2 BHK Homes @ Thergaon",
+    },
+    {
+      imageSrc: image10,
+      title: "Samarth Srushti",
+      description: "1 & 2 BHK Luxurious Homes @ Chikhali",
     },
     {
       imageSrc: image5,
@@ -33,29 +43,20 @@ const Projects = () => {
       description: "1 & 2 BHK Luxurious Homes @ Pradhikaran Annexe",
     },
     {
-      imageSrc: image6,
-      title: "Raj Angan",
-      description: "1 & 2 BHK Luxurious Homes @ Chikhali More Vasti",
-    },
-    {
-      imageSrc: image7,
-      title: "Vaishnav Residency",
-      description: "1 & 2 BHK Luxurious Homes @ Chikhali",
-    },
-    {
-      imageSrc: image8,
-      title: "Kunal Heritage",
-      description: "2 BHK Luxurious Homes @ Sector 20 Pradhikaran",
-    },
-    {
       imageSrc: image9,
       title: "Vineet Heights",
       description: "1 & 2 BHK Luxurious Homes @ Sane Chowk",
     },
     {
-      imageSrc: image10,
-      title: "Samarth Srushti",
-      description: "1 & 2 BHK Luxurious Homes @ Chikhali",
+      imageSrc: image6,
+      title: "Raj Angan",
+      description: "1 & 2 BHK Luxurious Homes @ Chikhali More Vasti",
+    },
+
+    {
+      imageSrc: image8,
+      title: "Kunal Heritage",
+      description: "2 BHK Luxurious Homes @ Sector 20 Pradhikaran",
     },
   ];
 
@@ -69,7 +70,7 @@ const Projects = () => {
           <h1 className="text-3xl text-center font-semibold text-white mb-12">
             Completed Projects
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-12 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 lg:gap-12 gap-6">
             {completedprojects.map((card, index) => (
               <Card
                 key={index}

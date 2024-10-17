@@ -167,7 +167,7 @@ export function Home2() {
               standards of living.
             </p>
             <button
-              className="border border-black mt-4 p-3 text-base md:text-lg font-medium rounded-md text-white bg-purple-800 hover:bg-purple-900 hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
+              className="border border-black mt-4 p-2 md:p-3 text-base md:text-lg font-medium rounded-md text-white bg-purple-800 hover:bg-purple-900 hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
               type="button"
             >
               Explore More

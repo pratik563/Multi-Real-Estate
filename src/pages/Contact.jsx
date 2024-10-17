@@ -135,7 +135,7 @@ const ContactForm = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center bg-gray-300 w-full h-auto mb-8 p-6">
+      <div className="flex justify-center items-center w-full h-auto p-6">
         <div className="w-full md:w-2/3 lg:w-3/4 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 duration-300 ease-in-out">
           <iframe
             title="Google Map"

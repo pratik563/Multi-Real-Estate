@@ -19,7 +19,7 @@ const Ongoingcard = ({ imageSrc, title, description, projectId }) => {
         <div className="block items-center mt-4">
           <Link
             to={`/${projectId}`}
-            className="inline-block bg-purple-900 text-white text-sm py-2 px-3 pointer rounded hover:font-medium"
+            className="inline-block bg-purple-900 hover:bg-purple-800 text-white text-sm py-2 px-3 pointer rounded hover:font-medium"
           >
             Know More
           </Link>
